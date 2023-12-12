@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Gulag</title> 
+    <script>
+        function confirmDelete() {
+            // Show a confirmation dialog
+            var confirmation = confirm("Boss are you sure you want him un-existed?");
+            
+            // If user confirms, submit the form
+            if (confirmation) {
+                document.getElementById("deleteButton").submit();
+            } else {
+                // If user cancels, do nothing
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body style="background-color: bisque;">
+	<h1>Removing User From DataBase</h1>
+    <form method="post" action="nixPerson" onsubmit="return confirmDelete()" id="deleteButton">
+        <fieldset>
+            <strong>Email Address: </strong><input type="email" name="email" style="width: 20rem">
+            <br> <br>
+            <input type="reset">
+            <input type="submit" value="Farewell My Friend">
+        </fieldset>
+        <br>
+
+    </form>
+
+
+    <a href="/">Spare Him</a>
+
+    <hr>
+
+    <div style="text-align: center;">Oober <strong>Eats</strong> &reg;</div>
+
+    <hr>
+
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Order Data</title>
+
+</head>
+
+<body style="background-color: bisque;">
+	<h1>Previous Orders</h1>
+    <% users.forEach(users => { %>
+        <fieldset>
+	<div>
+		<strong>Name: </strong><%- users.name %><br>
+		<strong>Email Address: </strong><%- users.email %><br>
+		<strong>Address: </strong><%- users.address %><br>
+    <br>
+
+    <strong>Breakfast</strong>
+    <ul>
+      <li>Main: <%- users.breakfast%>      </li>
+      <li>Drinks: <ul>
+                    <li>Water: <%- users.breakfastWater %></li>
+                    <li>Soda: <%- users.breakfastSoda %></li>
+                    <li>Milk: <%- users.breakfastMilk %></li>
+                    <li>Tea: <%- users.breakfastTea %></li>
+                    <li>Juice: <%- users.breakfastJuice %></li>
+                  </ul>
+      </li>
+      <li>Sides: <ul>
+        <li>Yogurt: <%- users.breakfastYogurt %></li>
+        <li>French Fries: <%- users.breakfastFries %></li>
+        <li>Coder's Tears: <%- users.breakfastTears %></li>
+        <li>Mixed Fruit: <%- users.breakfastFruit %></li>
+        <li>Steamed Veggies: <%- users.breakfastVeggies %></li>
+                </ul>
+      </li>
+    </ul>
+
+    <strong>Lunch</strong>
+    <ul>
+      <li>Main: <%- users.lunch%>      </li>
+      <li>Drinks: <ul>
+                    <li>Water: <%- users.lunchWater %></li>
+                    <li>Soda: <%- users.lunchSoda %></li>
+                    <li>Milk: <%- users.lunchMilk %></li>
+                    <li>Tea: <%- users.lunchTea %></li>
+                    <li>Juice: <%- users.lunchJuice %></li>
+                  </ul>
+      </li>
+      <li>Sides: <ul>
+        <li>Potato Wedges: <%- users.lunchWedges %></li>
+        <li>French Fries: <%- users.lunchFries %></li>
+        <li>Mashed Potatoes <%- users.lunchPotatoes %></li>
+        <li>Mixed Fruit: <%- users.lunchFruit %></li>
+        <li>Steamed Veggies: <%- users.lunchVeggies %></li>
+                </ul>
+      </li>
+    </ul>
+
+    <strong>Dinner</strong>
+    <ul>
+      <li>Main: <%- users.dinner%>      </li>
+      <li>Drinks: <ul>
+                    <li>Water: <%- users.dinnerWater %></li>
+                    <li>Soda: <%- users.dinnerSoda %></li>
+                    <li>Milk: <%- users.dinnerMilk %></li>
+                    <li>Tea: <%- users.dinnerTea %></li>
+                    <li>Juice: <%- users.dinnerJuice %></li>
+                  </ul>
+      </li>
+      <li>Sides: <ul>
+        <li>Potato Wedges: <%- users.dinnerWedges %></li>
+        <li>French Fries: <%- users.dinnerFries %></li>
+        <li>Mashed Potatoes <%- users.dinnerPotatoes %></li>
+        <li>Mixed Fruit: <%- users.dinnerFruit %></li>
+        <li>Steamed Veggies: <%- users.dinnerVeggies %></li>
+                </ul>
+      </li>
+    </ul>
+</fieldset>
+    <% }) %>
+
+	</div>
+
+  <a href="/">HOME</a>
+
+  <hr style="color: black;">
+
+  <div style="text-align: center;">Oober <strong>Eats</strong> &reg;</div>
+
+  <hr>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Initiate Order 66</title> 
+
+    <script>
+        function confirmDelete() {
+            // Show a confirmation dialog
+            var confirmation = confirm("Are you sure you want to starve the jedi?");
+            
+            // If user confirms, submit the form
+            if (confirmation) {
+                document.getElementById("deleteButton").submit();
+            } else {
+                // If user cancels, do nothing
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body style="background-color: bisque;">
+	<h1>Removing All Deliveries</h1>
+    <form method="post" action="nixDB" onsubmit="return confirmDelete()" id="deleteButton">
+        <input type="submit" value="Starve our enemies">
+    </form>
+
+
+    <a href="/">Home</a>
+
+    <hr>
+
+    <div style="text-align: center;">Oober <strong>Eats</strong> &reg;</div>
+
+    <hr>
+
+</body>
+
+</html>

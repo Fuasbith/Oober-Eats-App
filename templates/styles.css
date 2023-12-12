@@ -1,0 +1,14 @@
+.line {
+    border: 1px solid #ccc; /* Set border properties (color, width, style) */
+    margin: 0; /* Remove default margins */
+    width: 100%; /* Full width */
+}
+
+.bg {
+    background-image: url('../food.jpg');
+    background-size: cover; 
+}
+
+.test {
+    background-color: lightseagreen;
+}

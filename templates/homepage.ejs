@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Oober Eats</title> 
+</head>
+
+<body style="background-image: url('/food.jpg');">
+	<h1 style="background-color: green; border: 2px solid black;">Welcome to the Official OoberEats Website</h1>
+    <div style="background-color: rgb(8, 149, 46); border: 2px solid black;">
+        <h2>Order Here!</h2>
+        <h3>Hungry? <a href="/order"><button >Order Here</button></a> </h3>
+        <h3>Want to see what you've bought in the past? <a href="/viewOrders"><button >Review Past Orders</button></a> </h3>
+    </div>
+
+    <br>
+
+    <div style="background-color: beige; border: 2px solid black; text-align: center;">
+        <fieldset style="display: flex; flex-wrap: wrap; justify-content: center;">
+            <legend style="text-align: center;"><h2>See What Our Happy Customers Have To Say</h2></legend>
+            <div style="width: 50%; padding: 5px; text-align: left;">
+                <p>I've never had better food! -Daniel</p>
+                <p>It's so convenient. I'll never go back! -Jessica</p>
+                <p>The service was exceptional! -Emily</p>
+                <p>Great variety on the menu. -Alex</p>
+                <p>Fast delivery and piping hot food. -Sophie</p>
+                <p>Not worth the price. -Max</p>
+            </div>
+            <div style="width: 50%; padding: 5px; text-align: left;">
+                <p>It's ok. -Brock</p>
+                <p>They gave me food poisoning. -Rick</p>
+                <p>Not the worse thing I've ever eaten. -Johnny</p>
+                <p>Food is kind of a banger. -Rodrigo</p>
+                <p>Better than what I can make at least. -Falco</p>
+            </div>
+        </fieldset>
+    </div>
+    
+    <br>
+
+    <fieldset style="background-color:antiquewhite; border: 2px solid black;">
+        <h2>Observe Our Success Here</h2>
+        <div id="stockPrice"><strong></strong></div>
+    </fieldset>
+
+    <br>
+    
+    <div style="background-color: rgb(220, 90, 73); border: 2px solid black;">
+        <h2>Employees Only</h2>
+        <h3>Want to erase someone? <a href="/nixPerson"><button>Ice'em Boys</button></a> </h3>
+        <h3>Want to wipe the database? <a href="/nixDB"><button>Burn everything to the ground</button></a> </h3>
+    </div>
+
+    <br>
+
+    <div style="text-align: center; background-color:blanchedalmond; border: 2px solid black;">Oober <strong>Eats</strong> &reg;</div>
+
+    <script>
+        // replace the "demo" apikey below with your own key from https://www.alphavantage.co/support/#api-key
+        var url = 'https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=UBER&apikey=E20NOEIE6NLPOVPK';
+    
+        // Fetch stock price using Alpha Vantage API
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                // Extract the stock price from the API response
+                const stockPrice = data['Global Quote']['05. price'];
+                        
+                // Display the stock price on the webpage
+                document.getElementById('stockPrice').innerHTML = `<strong style="color: green;">Uber Eats Stock Price: $${stockPrice}</strong>`;
+    
+            })
+            .catch(error => {
+                console.error('Error fetching stock price:', error);
+            });
+        </script>    
+
+</body>
+
+</html>
